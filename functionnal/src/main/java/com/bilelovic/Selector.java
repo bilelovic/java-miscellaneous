@@ -13,11 +13,11 @@ public class Selector {
 	public static int doubleIt(int number) {
 		try {
 			Thread.sleep(1000);
-			
-		}catch(Exception ex) {
-			
+
+		} catch (Exception ex) {
+
 		}
-		return number  * 2;
+		return number * 2;
 	}
 
 	public static void main(String[] args) {
@@ -25,10 +25,9 @@ public class Selector {
 		List<Integer> values = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 		System.out.println(totlValues(values, e -> true));
 		System.out.println(totlValues(values, e -> e % 2 == 0));
-		
+
 		// Referential transparency vs parallelStream
 		System.out.println(values.parallelStream().mapToInt(Selector::doubleIt).sum());
-
 
 	}
 
